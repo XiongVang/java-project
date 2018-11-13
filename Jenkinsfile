@@ -16,6 +16,6 @@ node('linux') {
     }
 
     stage ('Report') {
-        echo 'Report'
+        sh 'aws cloudformation describe-stack-resources --region us-east-1 --stack-name jenkins-stack'
     }
 }
