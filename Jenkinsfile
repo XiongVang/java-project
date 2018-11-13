@@ -12,7 +12,7 @@ node('linux') {
     }
 
     stage ('Deploy') {
-        echo 'Deploy'
+        sh 'aws s3 cp /workspace/java-pipeline/dist/ s3://vang4999-seis665-assignment9/ --recursive --exclude "*" --include "*.jar"'
     }
 
     stage ('Report') {
