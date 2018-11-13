@@ -8,7 +8,7 @@ node('linux') {
     }
 
     stage ('Build') {
-        echo 'Build'
+        sh 'ant -f build.xml -v'
     }
 
     stage ('Deploy') {
